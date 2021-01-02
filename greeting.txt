@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+#---------------------------------------------------------------------------
+def greeting():
+	print("--------------------------------------------------------------")	
+	print("|           Hello! Welcome to Hangman Game!                  |")
+	print("--------------------------------------------------------------")	
+	print("-------These are the instructions for hangman game-----------|")
+	print("|      -You can guess a word one letter at a time            |")	
+	print("|      -You have a maximum of 10 unsuccessful tries          |")
+	print("|      -You can play more than one round                     |")
+	print("--------------------------------------------------------------")	
+	print("--------------------------------------------------------------")

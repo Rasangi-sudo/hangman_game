@@ -1,0 +1,35 @@
+#!/usr/bin/python3
+#---------------------------------------------------------------------------
+import random
+def greeting():
+	print("--------------------------------------------------------------")	
+	print("|           Hello! Welcome to Hangman Game!                  |")
+	print("--------------------------------------------------------------")	
+	print("-------These are the instructions for hangman game-----------|")
+	print("|      -You can guess a word one letter at a time            |")	
+	print("|      -You have a maximum of 10 unsuccessful tries          |")
+	print("|      -You can play more than one round                     |")
+	print("--------------------------------------------------------------")	
+	print("--------------------------------------------------------------")
+	return 0
+
+def selection(words):
+	print("Word list =", words)
+	word = random.choice(words)
+	print("You can see how many letters to the word: ")	
+	return word
+
+def Guess(correct, incorrect):
+	print("~correct guesses!",correct)
+	print("~wrong guesses!",incorrect)
+	return 0
+
+def final_case(guesses, word, chances):
+	if guesses not in word:
+			chances -= 1
+			print("Wrong charactor!")
+			print("You have", chances,"more guesses")
+			if chances == 0:
+				print("You Loose")
+				print("The word is: ", word)
+	return 0

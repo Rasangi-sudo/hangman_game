@@ -1,0 +1,52 @@
+#!/usr/bin/python3
+#---------------------------------------------------------------------------
+import random
+import wordlist as wl
+import greeting
+greeting.greeting()
+start = input("Do you want to start the game?(y/n): ")
+while start == "y":
+	words = wl.first()
+	word = random.choice(words)
+	print("You can see how many letters to the word: ")
+	guesses = ""
+	chances = 10
+	while chances > 0:
+		incorrect = [ ]
+		correct = [ ]
+		failed_chances = 0
+		for char in word:
+			if char in guesses:
+				print(char)
+			else:
+				print("_")
+				failed_chances += 1
+			
+		for char in guesses:
+			if not char in word:
+				incorrect.append(char)
+			else :
+				correct.append(char)
+		print("~correct guesses!",correct)
+		print("~wrong guesses!",incorrect)
+
+
+		if failed_chances == 0:
+			print("you win!")
+			print("The word is: ", word)
+			break
+	
+		guess = input("~guess a charactor: ")
+		guesses += guess
+		if guesses not in word:
+			chances -= 1
+			print("Wrong charactor!")
+			print("You have", chances,"more guesses")
+			if chances == 0:
+				print("You Loose")
+				print("The word is: ", word)
+	start = input("Do you want to continue the game again?(y/n)")
+	if start == "n":
+		print("Have a good day!")
+		break
+

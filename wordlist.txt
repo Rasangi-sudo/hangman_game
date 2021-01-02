@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+def first():
+	list1 = ["melon", "mango", "apple", "peach", "orange", "grape"]
+	list2 = ["fish", "rat", "goat", "bird", "dog", "cat"]
+	list3 = ["van", "car", "bike", "ship", "plane", "boat"]
+	selected_list = " "
+	print("list1 =", list1)
+	print("list2 =", list2)
+	print("list3 =", list3)	
+	decision = int(input("Choose a list from about 3 lists(e.g. 1/2/3): "))
+	if decision == 1:
+		selected_list = list1
+	elif decision == 2:
+		selected_list = list2
+	elif decision == 3:
+		selected_list = list3
+	else :
+		print("invalid input!")
+	return selected_list
+
